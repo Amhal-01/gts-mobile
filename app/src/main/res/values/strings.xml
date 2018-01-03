@@ -19,8 +19,9 @@
     <string name="title_user_detail">User Detail</string>
 
     <string name="title_activity_loading">Loading</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="wrong_button">Return to Map screen</string>
+    <string name="wrong_title">Uh Oh !</string>
+    <string name="wrong_text">Something went wrong :/</string>
 
     <string name="title_activity_error">Error</string>
 </resources>
