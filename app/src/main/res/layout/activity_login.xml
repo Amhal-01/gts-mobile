@@ -9,28 +9,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="gts.com.mobile.LoginActivity">
+    tools:context="gts.com.mobile.LoginActivity"
+    android:theme="@style/Theme.AppCompat.NoActionBar">
 
     <!-- Login progress -->
     <ImageView
         android:id="@+id/bus2"
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:contentDescription="@string/app_name"
-        app:srcCompat="@drawable/bus" />
-
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
-
-    <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="130dp"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/app_name"
+        android:cropToPadding="false"
+        app:srcCompat="@drawable/bus" />
 
         <LinearLayout
             android:id="@+id/email_login_form"
@@ -49,6 +39,7 @@
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+                    android:padding="25dp"
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
@@ -67,6 +58,7 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
+                    android:padding="25dp"
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
@@ -76,20 +68,22 @@
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/SteelBlue"
+                android:layout_margin="30dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/GtsColor"
+                android:padding="20dp"
                 android:text="@string/action_sign_in_short"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/descrption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="20dp"
                 android:text="@string/title_activity_loading"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
-    </ScrollView>
 </LinearLayout>

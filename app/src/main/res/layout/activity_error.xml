@@ -55,12 +55,13 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36sp" />
+        android:textSize="60sp" />
 
     <Button
         android:id="@+id/wrong_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/wrong_button" />
+        android:text="@string/wrong_button"
+        android:layout_gravity="bottom|center"/>
 
 </LinearLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/SteelBlue"
+    android:background="#3886C7"
     android:orientation="vertical">
 
     <TextView
@@ -31,10 +31,14 @@
         android:layout_height="wrap_content"
         android:textSize="36sp" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="80dp"
+        app:indicatorColor="@color/White"
+        app:indicatorName="BallPulseIndicator" />
 
 </LinearLayout>

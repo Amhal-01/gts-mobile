@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.wang.avi.AVLoadingIndicatorView;
+
 public class LoginActivity extends AppCompatActivity {
     private Button map;
     @Override
@@ -22,5 +24,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 }
 

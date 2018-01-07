@@ -3,6 +3,9 @@ package gts.com.mobile;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
+
+import com.wang.avi.AVLoadingIndicatorView;
 
 public class LoadingActivity extends AppCompatActivity {
 
@@ -26,4 +29,5 @@ public class LoadingActivity extends AppCompatActivity {
         });
         thread.start();
     }
+
 }
