@@ -17,8 +17,8 @@ public class LoadingActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1500);
-                    Intent intent = new Intent(LoadingActivity.this, MapActivity.class);
+                    Thread.sleep(3000);
+                    Intent intent = new Intent(LoadingActivity.this, LoginActivity.class);
                     startActivity(intent);
                 } catch (Exception e) {
                     e.printStackTrace();
