@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -48,23 +48,14 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
     }
 
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
         LatLng marrakech = new LatLng(31.6341600, -7.9999400);
-        mMap.addMarker(new MarkerOptions().position(marrakech).title("Marker in Marrakech"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(marrakech));
+        mMap.addMarker(new MarkerOptions().position(marrakech).title("Marker in Marrakech").icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_marker)));
+        /*mMap.moveCamera(CameraUpdateFactory.newLatLng(marrakech));*/
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(marrakech, 17.0f));
     }
 }
