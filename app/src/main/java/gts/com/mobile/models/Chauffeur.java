@@ -1,14 +1,14 @@
 package gts.com.mobile.models;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Chauffeur extends Personne implements Serializable {
     private String telephone;
     private Boolean isOk;
-    private LocalDate dateEmbauche;
+    private Date dateEmbauche;
 
-    public Chauffeur(int id, String nom, String prenom, String password, String telephone, String email, Boolean isActive, Boolean isOk, LocalDate dateEmbauche) {
+    public Chauffeur(int id, String nom, String prenom, String password, String telephone, String email, Boolean isActive, Boolean isOk, Date dateEmbauche) {
         super(id, nom, prenom, password, email, isActive);
         this.isOk = isOk;
         this.telephone = telephone;
@@ -27,11 +27,11 @@ public class Chauffeur extends Personne implements Serializable {
         isOk = ok;
     }
 
-    public LocalDate getDateEmbauche() {
+    public Date getDateEmbauche() {
         return dateEmbauche;
     }
 
-    public void setDateEmbauche(LocalDate dateEmbauche) {
+    public void setDateEmbauche(Date dateEmbauche) {
         this.dateEmbauche = dateEmbauche;
     }
 
@@ -41,5 +41,14 @@ public class Chauffeur extends Personne implements Serializable {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    @Override
+    public String toString() {
+        return "Chauffeur{" +
+                "telephone='" + telephone + '\'' +
+                ", isOk=" + isOk +
+                ", dateEmbauche=" + dateEmbauche +
+                "} " + super.toString();
     }
 }

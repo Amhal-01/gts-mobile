@@ -20,21 +20,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <!--
-        <activity
-            android:name=".UserListActivity"
-            android:label="@string/title_user_list"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".UserDetailActivity"
-            android:label="@string/title_user_detail"
-            android:parentActivityName=".UserListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="gts.com.mobile.UserListActivity" />
-        </activity>
-        -->
+
         <activity
             android:name=".LoadingActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

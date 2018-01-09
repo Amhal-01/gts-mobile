@@ -9,6 +9,11 @@ import android.widget.Button;
 
 import com.wang.avi.AVLoadingIndicatorView;
 
+import java.util.Date;
+
+import gts.com.mobile.models.Chauffeur;
+import gts.com.mobile.models.Etudiant;
+
 public class LoginActivity extends AppCompatActivity {
     private Button map;
     @Override
@@ -20,6 +25,26 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, MapActivity.class);
+                Chauffeur c = new Chauffeur();
+                c.setId(1);
+                c.setPrenom("Hamza");
+                c.setNom("Amhal");
+                c.setEmail("amhalhamza@gmail.com");
+                c.setPassword("123456");
+                c.setDateEmbauche(new Date("25/10/2017"));
+                c.setOk(true);
+                c.setTelephone("0661666736");
+                c.setActive(true);
+                intent.putExtra("chauffeur",c);
+
+                Etudiant e = new Etudiant();
+                e.setId(1);
+                e.setPrenom("Younes");
+                e.setNom("Zaid");
+                e.setEmail("zaidyounes@gmail.com");
+                e.setPassword("123456");
+                e.getDateNaissance(new Date("07/03/1994"));
+                intent.putExtra("etudiant",e);
                 startActivity(intent);
             }
         });

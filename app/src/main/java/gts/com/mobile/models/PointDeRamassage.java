@@ -3,15 +3,16 @@ package gts.com.mobile.models;
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.Timer;
 
 public class PointDeRamassage implements Serializable {
     private int id;
     private Itineraire point;
-    private LocalTime horaire;
+    private Timer horaire;
     private List<Voyage> voyages;
     private List<Etudiant> etudiants;
 
-    public PointDeRamassage(int id, Itineraire point, LocalTime horaire, List<Voyage> voyages, List<Etudiant> etudiants) {
+    public PointDeRamassage(int id, Itineraire point, Timer horaire, List<Voyage> voyages, List<Etudiant> etudiants) {
         this.id = id;
         this.point = point;
         this.horaire = horaire;
@@ -38,11 +39,11 @@ public class PointDeRamassage implements Serializable {
         this.point = point;
     }
 
-    public LocalTime getHoraire() {
+    public Timer getHoraire() {
         return horaire;
     }
 
-    public void setHoraire(LocalTime horaire) {
+    public void setHoraire(Timer horaire) {
         this.horaire = horaire;
     }
 

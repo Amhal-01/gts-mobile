@@ -2,13 +2,14 @@ package gts.com.mobile.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Etudiant extends Personne implements Serializable {
-    private LocalDate dateNaissance;
+    private Date dateNaissance;
     private Ecole ecole;
     private PointDeRamassage pdr;
 
-    public Etudiant(int id, String nom, String prenom, String password, String email, LocalDate dateNaissance, Boolean isActive, Ecole ecole, PointDeRamassage pdr) {
+    public Etudiant(int id, String nom, String prenom, String password, String email, Date dateNaissance, Boolean isActive, Ecole ecole, PointDeRamassage pdr) {
         super(id, nom, prenom, password, email, isActive);
         this.ecole = ecole;
         this.pdr = pdr;
@@ -34,11 +35,11 @@ public class Etudiant extends Personne implements Serializable {
         this.pdr = pdr;
     }
 
-    public LocalDate getDateNaissance() {
+    public Date getDateNaissance(Date date) {
         return dateNaissance;
     }
 
-    public void setDateNaissance(LocalDate dateNaissance) {
+    public void setDateNaissance(Date dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 }
